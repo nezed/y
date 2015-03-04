@@ -19,7 +19,7 @@ function findCombinations( list, of ) {
 
 	var results = [];
 	for( var i = 0; i < klen; i++ ) {
-		walker( i, +values[ keys[0] ], 0, [] );
+		walker( i, +values[ keys[i] ], 0, [] );
 	}
 	return results;
 
@@ -28,10 +28,9 @@ function findCombinations( list, of ) {
 		if( left <= 0 ) {
 			return;
 		}
-
 		left--;
 		sum += +keys[current];
-		elems.push( keys[current] );
+		elems.push( +keys[current] );
 
 		if( sum === of ) {
 			results.push(elems);
