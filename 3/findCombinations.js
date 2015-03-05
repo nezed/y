@@ -2,6 +2,7 @@
  * @module findCombinations
  * @type {Function}
  */
+typeof module !== "undefined" && module.exports && (module.exports = findCombinations);
 
 /**
  * Поиск вохможных комбинаций в массиве, сумма которых равна N
@@ -9,8 +10,8 @@
  * (Если он все таки интерессует, то стоит дописать функцию, 
  * воссоздающую все возможеные комбинации из выходных результатов.)
  *
- * @param haystack {Array} массив слогаемых
- * @param N {Number} искомая сумма
+ * @param {Array} haystack массив слогаемых
+ * @param {Number} N искомая сумма
  * @returns {Array} массив из массивов комбинаций слогаемых =)
  */
 function findCombinations( haystack, N ) {
@@ -18,7 +19,7 @@ function findCombinations( haystack, N ) {
 		throw new Error('Haystack array as first argument required =(');
 
 	// Number пригодится
-	N = +(N || 10);
+	N = +N+ || 10);
 
 	// Объект, в качестве ключей которого эл-ты входного массива
 	// а ключи - количество вхождений эл-та в исходный массив.
@@ -90,6 +91,3 @@ function findCombinations( haystack, N ) {
 		}
 	}
 }
-
-// Модулем для ноды было бы збс)
-typeof module !== "undefined" && module.exports && (module.exports = findCombinations);
