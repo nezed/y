@@ -19,7 +19,7 @@ function findCombinations( haystack, N ) {
 		throw new Error('Haystack array as first argument required =(');
 
 	// Number пригодится
-	N = +N+ || 10);
+	N = (+N || 10);
 
 	// Объект, в качестве ключей которого эл-ты входного массива
 	// а ключи - количество вхождений эл-та в исходный массив.
